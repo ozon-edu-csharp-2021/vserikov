@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{ECD238FA-7620-4EB2-9AC3-A7A2A8CB0C55}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1985E33E-771E-41FB-96E0-D907E90A146A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{7D9F1B83-2894-4F71-88E1-18D80AE035E8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OzonEdu.StockApi", "src\OzonEdu.StockApi\OzonEdu.StockApi.csproj", "{7F71FE1D-AE21-442D-91DF-0E27D6D7FF19}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F71FE1D-AE21-442D-91DF-0E27D6D7FF19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F71FE1D-AE21-442D-91DF-0E27D6D7FF19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F71FE1D-AE21-442D-91DF-0E27D6D7FF19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F71FE1D-AE21-442D-91DF-0E27D6D7FF19}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7F71FE1D-AE21-442D-91DF-0E27D6D7FF19} = {1985E33E-771E-41FB-96E0-D907E90A146A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {63F1CD74-0BA9-4170-AB8D-C719A6361ADD}
+	EndGlobalSection
+EndGlobal
