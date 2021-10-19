@@ -25,7 +25,7 @@ namespace OzonEdu.MerchandiseService
             {
                 endpoints.MapGet("/", async context =>
 {
-                    await context.Response.WriteAsync("<!DOCTYPE html><html><head><title>Hi</title></head><body>It works!</body></html>");
+                    await context.Response.WriteAsync("It works");
                 });
             });
         }

@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  supply-service:
+    image: ghcr.io/ozon-edu-csharp-2021/supply-service:main
+    hostname: supply-service
+    depends_on:
+      - redis
+  emailing-service:
+    image: ghcr.io/ozon-edu-csharp-2021/emailing-service:main
+    hostname: emailing-service
+    depends_on:
+      - redis
+  employees-service:
+    image: ghcr.io/ozon-edu-csharp-2021/employees-service:main
+    hostname: employees-service
+    depends_on:
+      - redis
+  stock-api:
+    image: ghcr.io/ozon-edu-csharp-2021/stock-api:main
+    hostname: stock-api
+    depends_on:
+      - redis
+  redis:
+    image: redis
+    hostname: redis
