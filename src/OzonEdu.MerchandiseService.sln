@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{85FA4232-145E-4540-81AB-0B37132397F6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OzonEdu.MerchandiseService.Main", "OzonEdu.MerchandiseService.Main\OzonEdu.MerchandiseService.Main.csproj", "{88B2CA01-277B-4C3E-AFFF-36B4E1B0531C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{43753362-2D90-4E2B-B707-DCCD27409D07}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{E9F01AC7-6032-4E44-B697-4CA87C2BCC3C}"
 	ProjectSection(SolutionItems) = preProject
 		..\.gitattributes = ..\.gitattributes
 		..\.gitignore = ..\.gitignore
@@ -14,7 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{437533
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OzonEdu.MerchandiseService", "OzonEdu.MerchandiseService\OzonEdu.MerchandiseService.csproj", "{A2954AD9-6CC1-4825-B208-8937A4D77C02}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0C12EE8E-710A-4D1F-A4B2-726DBA5F4BF4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,18 +22,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A2954AD9-6CC1-4825-B208-8937A4D77C02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A2954AD9-6CC1-4825-B208-8937A4D77C02}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A2954AD9-6CC1-4825-B208-8937A4D77C02}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A2954AD9-6CC1-4825-B208-8937A4D77C02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88B2CA01-277B-4C3E-AFFF-36B4E1B0531C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88B2CA01-277B-4C3E-AFFF-36B4E1B0531C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88B2CA01-277B-4C3E-AFFF-36B4E1B0531C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88B2CA01-277B-4C3E-AFFF-36B4E1B0531C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{A2954AD9-6CC1-4825-B208-8937A4D77C02} = {85FA4232-145E-4540-81AB-0B37132397F6}
+		{88B2CA01-277B-4C3E-AFFF-36B4E1B0531C} = {0C12EE8E-710A-4D1F-A4B2-726DBA5F4BF4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {BA198E70-A9AC-4285-8A4E-226939CD2A2B}
+		SolutionGuid = {78CBA913-538D-4088-92E4-644BE6A5CF3E}
 	EndGlobalSection
 EndGlobal
