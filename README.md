@@ -1,1 +1,1 @@
-# vserikov
+# merchandise-service

@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OzonEdu.MerchandiseService.Main", "OzonEdu.MerchandiseService.Main\OzonEdu.MerchandiseService.Main.csproj", "{88B2CA01-277B-4C3E-AFFF-36B4E1B0531C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{E9F01AC7-6032-4E44-B697-4CA87C2BCC3C}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitattributes = ..\.gitattributes
+		..\.gitignore = ..\.gitignore
+		..\docker-compose.yml = ..\docker-compose.yml
+		..\dockerfile = ..\dockerfile
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0C12EE8E-710A-4D1F-A4B2-726DBA5F4BF4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88B2CA01-277B-4C3E-AFFF-36B4E1B0531C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88B2CA01-277B-4C3E-AFFF-36B4E1B0531C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88B2CA01-277B-4C3E-AFFF-36B4E1B0531C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88B2CA01-277B-4C3E-AFFF-36B4E1B0531C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{88B2CA01-277B-4C3E-AFFF-36B4E1B0531C} = {0C12EE8E-710A-4D1F-A4B2-726DBA5F4BF4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {78CBA913-538D-4088-92E4-644BE6A5CF3E}
+	EndGlobalSection
+EndGlobal
