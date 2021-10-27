@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using OzonEdu.MerchandiseService.Main.Infrastructure.Middlewares;
+using OzonEdu.MerchandiseService.Main.Services;
+using OzonEdu.MerchandiseService.Main.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,25 +15,13 @@ namespace OzonEdu.MerchandiseService.Main
 {
     public class Startup
     {
-        public void ConfigureServices(IServiceCollection services)
-        {
-        }
-
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-
             app.UseRouting();
-
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
+                endpoints.MapGrpcService<GrpcMerchService>();
+                endpoints.MapControllers();
             });
         }
     }

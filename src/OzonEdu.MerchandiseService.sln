@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OzonEdu.MerchandiseService.Main", "OzonEdu.MerchandiseService.Main\OzonEdu.MerchandiseService.Main.csproj", "{88B2CA01-277B-4C3E-AFFF-36B4E1B0531C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OzonEdu.MerchandiseService.Main", "OzonEdu.MerchandiseService.Main\OzonEdu.MerchandiseService.Main.csproj", "{88B2CA01-277B-4C3E-AFFF-36B4E1B0531C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{E9F01AC7-6032-4E44-B697-4CA87C2BCC3C}"
 	ProjectSection(SolutionItems) = preProject
@@ -16,6 +16,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{E9F01A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0C12EE8E-710A-4D1F-A4B2-726DBA5F4BF4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OzonEdu.MerchandiseService.HttpClient", "OzonEdu.MerchandiseService.HttpClient\OzonEdu.MerchandiseService.HttpClient.csproj", "{DD3465C0-2B12-41C9-8747-C943235FC345}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OzonEdu.MerchandiseService.HttpModels", "OzonEdu.MerchandiseService.HttpModels\OzonEdu.MerchandiseService.HttpModels.csproj", "{EAD6C7FC-72AA-4FF9-B0FB-59C4F561B920}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OzonEdu.MerchandiseService.Grpc", "OzonEdu.MerchandiseService.Grpc\OzonEdu.MerchandiseService.Grpc.csproj", "{73DD2099-96FD-47CE-A58A-966EAAF713CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,12 +32,27 @@ Global
 		{88B2CA01-277B-4C3E-AFFF-36B4E1B0531C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88B2CA01-277B-4C3E-AFFF-36B4E1B0531C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88B2CA01-277B-4C3E-AFFF-36B4E1B0531C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD3465C0-2B12-41C9-8747-C943235FC345}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD3465C0-2B12-41C9-8747-C943235FC345}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD3465C0-2B12-41C9-8747-C943235FC345}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD3465C0-2B12-41C9-8747-C943235FC345}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAD6C7FC-72AA-4FF9-B0FB-59C4F561B920}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAD6C7FC-72AA-4FF9-B0FB-59C4F561B920}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAD6C7FC-72AA-4FF9-B0FB-59C4F561B920}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAD6C7FC-72AA-4FF9-B0FB-59C4F561B920}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73DD2099-96FD-47CE-A58A-966EAAF713CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73DD2099-96FD-47CE-A58A-966EAAF713CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73DD2099-96FD-47CE-A58A-966EAAF713CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73DD2099-96FD-47CE-A58A-966EAAF713CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{88B2CA01-277B-4C3E-AFFF-36B4E1B0531C} = {0C12EE8E-710A-4D1F-A4B2-726DBA5F4BF4}
+		{DD3465C0-2B12-41C9-8747-C943235FC345} = {0C12EE8E-710A-4D1F-A4B2-726DBA5F4BF4}
+		{EAD6C7FC-72AA-4FF9-B0FB-59C4F561B920} = {0C12EE8E-710A-4D1F-A4B2-726DBA5F4BF4}
+		{73DD2099-96FD-47CE-A58A-966EAAF713CB} = {0C12EE8E-710A-4D1F-A4B2-726DBA5F4BF4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {78CBA913-538D-4088-92E4-644BE6A5CF3E}
