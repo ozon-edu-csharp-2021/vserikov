@@ -18,7 +18,7 @@ namespace OzonEdu.MerchandiseService.Main.Services
             _service = service;
         }
 
-        public override async Task<RequestCreatedGrpcModel> RequestMerch(RequestMerchGrpcModel request, ServerCallContext context)
+        public override async Task<RequestMerchOutputModel> RequestMerch(RequestMerchInputModel request, ServerCallContext context)
         {
             var remap = new RequestMerchModel
             {
@@ -28,16 +28,16 @@ namespace OzonEdu.MerchandiseService.Main.Services
             };
 
             await _service.CreateMerchRequest(remap, context.CancellationToken);
-            return new RequestCreatedGrpcModel();
+            return new RequestMerchOutputModel();
         }
 
-        public override async Task<GetMerchInfoResponse> GetMerchInfo(GetMerchInfoRequest request, ServerCallContext context)
+        public override async Task<MerchInfoOutputModel> GetMerchInfo(MerchInfoInputModel request, ServerCallContext context)
         {
             var items = await _service.GetInfoAboutMerchGiving(context.CancellationToken);
 
-            return new GetMerchInfoResponse
+            return new MerchInfoOutputModel
             {
-                Items = { items.Select(s=> new GetMerchInfoResponseUnit()
+                Items = { items.Select(s=> new MerchInfoUnitModel()
                 {
                     SenderId = s.SenderId,
                     RecieverId = s.ReceiverId,
