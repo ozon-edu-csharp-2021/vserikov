@@ -27,7 +27,7 @@ namespace OzonEdu.MerchandiseService.Main.Controllers
         /// <param name="input"></param>
         /// <param name="token"></param>
         /// <returns></returns>
-        [HttpGet]
+        [HttpPost]
         public async Task<IActionResult> RequestMerch(RequestMerchModel request, CancellationToken token)
         {
             await _service.CreateMerchRequest(request, token);
