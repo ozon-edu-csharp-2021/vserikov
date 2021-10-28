@@ -24,7 +24,7 @@ namespace OzonEdu.MerchandiseService.Main.Controllers
         /// <summary>
         /// Запросить мерч
         /// </summary>
-        /// <param name="input"></param>
+        /// <param name="request"></param>
         /// <param name="token"></param>
         /// <returns></returns>
         [HttpPost]
@@ -37,7 +37,6 @@ namespace OzonEdu.MerchandiseService.Main.Controllers
         /// <summary>
         /// Получить информацию о выдаче мерча
         /// </summary>
-        /// <param name="input"></param>
         /// <param name="token"></param>
         /// <returns></returns>
         [HttpGet]

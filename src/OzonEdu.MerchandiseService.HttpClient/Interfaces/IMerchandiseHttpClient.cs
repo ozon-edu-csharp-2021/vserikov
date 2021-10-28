@@ -10,6 +10,8 @@ namespace OzonEdu.MerchandiseService.HttpClient.Interfaces
 {
     public interface IMerchandiseHttpClient
     {
+        Task RequestMerch(RequestMerchModel request, CancellationToken token);
+
         Task<List<SingleMerchModel>> GetMerchInfo(CancellationToken token);
     }
 }
