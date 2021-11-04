@@ -8,8 +8,12 @@ namespace OzonEdu.MerchandiseService.HttpModels
 {
     public class RequestMerchModel
     {
+        public int SenderId { get; set; }
+
         public int RecieverId { get; set; }
-        public string MerchType { get; set; }
+
+        public int PackId { get; set; }
+
         public int Quantity { get; set; }
     }
 }

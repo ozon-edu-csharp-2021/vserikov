@@ -22,8 +22,9 @@ namespace OzonEdu.MerchandiseService.Main.Services
         {
             var remap = new RequestMerchModel
             {
+                SenderId = request.SenderId,
                 RecieverId = request.RecieverId,
-                MerchType = request.MerchType,
+                PackId = request.PackId,
                 Quantity = request.Quantity
             };
 
@@ -39,10 +40,10 @@ namespace OzonEdu.MerchandiseService.Main.Services
             {
                 Items = { items.Select(s=> new MerchInfoUnitModel()
                 {
-                    SenderId = s.SenderId,
-                    RecieverId = s.ReceiverId,
-                    MerchType = s.MerchType,
-                    Quantity = s.Quantity
+                    SenderId = s.Sender.Id,
+                    RecieverId = s.Reciever.Id,
+                    PackId = s.Pack.Id,
+                    Quantity = s.Quantity.Value
                 })}
             };
         }

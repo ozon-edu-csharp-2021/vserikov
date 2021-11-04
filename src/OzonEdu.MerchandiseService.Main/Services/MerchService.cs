@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using OzonEdu.MerchandiseService.Domain.AggregationModels.MerchItemAggregate;
+using OzonEdu.MerchandiseService.Domain.Exceptions;
 using OzonEdu.MerchandiseService.HttpModels;
 using OzonEdu.MerchandiseService.Main.Services.Interfaces;
 using System;
@@ -12,23 +14,41 @@ namespace OzonEdu.MerchandiseService.Main.Services
 {
     public class MerchService : IMerchService
     {
-        private readonly List<SingleMerchModel> Items = new List<SingleMerchModel>
+        private readonly List<MerchItem> Items = new()
         {
-            new SingleMerchModel() { SenderId = 52, ReceiverId = 149, MerchType = "Hat", Quantity = 11 },
-            new SingleMerchModel() { SenderId = 17, ReceiverId = 261, MerchType = "Pants", Quantity = 4 },
-            new SingleMerchModel() { SenderId = 726, ReceiverId = 994, MerchType = "Hat", Quantity = 17 },
-            new SingleMerchModel() { SenderId = 151, ReceiverId = 114, MerchType = "Pen", Quantity = 32 },
-            new SingleMerchModel() { SenderId = 17, ReceiverId = 773, MerchType = "Tshirt", Quantity = 4 }
+            new MerchItem(new Employee(10), new Employee(24), new Pack(PackType.StarterPack), new Quantity(1)),
+            new MerchItem(new Employee(16), new Employee(97), new Pack(PackType.WelcomePack), new Quantity(1)),
+            new MerchItem(new Employee(34), new Employee(39), new Pack(PackType.ConferenceSpeakerPack), new Quantity(1)),
+            new MerchItem(new Employee(42), new Employee(84), new Pack(PackType.WelcomePack), new Quantity(1)),
+            new MerchItem(new Employee(66), new Employee(16), new Pack(PackType.VeteranPack), new Quantity(1))
         };
 
         public async Task CreateMerchRequest(RequestMerchModel model, CancellationToken _)
         {
-            await Task.Delay(100);
+            var pack = new Pack(PackType.DefaultPack.GetPackTypeById(model.PackId));
+
+            if (GetEmployeeById(model.RecieverId).HasPackAlready(pack))
+                throw new RecieverHasPackException("reciever employee has this pack already");
+
+            var merchItem = new MerchItem(
+                new Employee(model.SenderId),
+                new Employee(model.RecieverId),
+                pack,
+                new Quantity(model.Quantity));
+
+            // send request
         }
 
-        public Task<List<SingleMerchModel>> GetInfoAboutMerchGiving(CancellationToken _)
+        public Task<List<MerchItem>> GetInfoAboutMerchGiving(CancellationToken _)
         {
             return Task.FromResult(Items);
+        }
+
+        private Employee GetEmployeeById(int id)
+        {
+            var emp = new Employee(id);
+            emp.AddPack(new Pack(PackType.VeteranPack));
+            return emp;
         }
     }
 }
