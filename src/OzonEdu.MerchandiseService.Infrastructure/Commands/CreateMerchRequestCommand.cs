@@ -19,7 +19,7 @@ namespace OzonEdu.MerchandiseService.Infrastructure.Commands
         {
             Sender = new Employee(senderId);
             Reciever = new Employee(recieverId);
-            Pack = new Pack(PackType.DefaultPack.GetPackTypeById(packId));
+            Pack = new Pack(PackType.GetPackTypeById(packId));
             Quantity = new Quantity(quantity);
         }
     }

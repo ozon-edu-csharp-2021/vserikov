@@ -1,12 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using OzonEdu.MerchandiseService.Domain.AggregationModels.MerchItemAggregate;
+﻿using OzonEdu.MerchandiseService.Domain.AggregationModels.MerchItemAggregate;
 using OzonEdu.MerchandiseService.Domain.Exceptions;
 using OzonEdu.MerchandiseService.HttpModels;
 using OzonEdu.MerchandiseService.Main.Services.Interfaces;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -25,10 +21,10 @@ namespace OzonEdu.MerchandiseService.Main.Services
 
         public async Task CreateMerchRequest(RequestMerchModel model, CancellationToken _)
         {
-            var pack = new Pack(PackType.DefaultPack.GetPackTypeById(model.PackId));
+            var pack = new Pack(PackType.GetPackTypeById(model.PackId));
 
             if (GetEmployeeById(model.RecieverId).HasPackAlready(pack))
-                throw new RecieverHasPackException("reciever employee has this pack already");
+                throw new RecieverHasPackException("Reciever employee has this pack already");
 
             var merchItem = new MerchItem(
                 new Employee(model.SenderId),

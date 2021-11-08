@@ -1,14 +1,9 @@
 ﻿using MediatR;
-using OzonEdu.MerchandiseService.Domain.AggregationModels.MerchItemAggregate;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using OzonEdu.MerchandiseService.Infrastructure.Models;
 
 namespace OzonEdu.MerchandiseService.Infrastructure.Queries
 {
-    public class GetMerchGivingInfoQuery : IRequest<List<MerchItem>>
+    public class GetMerchGivingInfoQuery : IRequest<MerchGivingInfoResponse>
     {
     }
 }

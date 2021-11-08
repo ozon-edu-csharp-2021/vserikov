@@ -1,4 +1,5 @@
-﻿using OzonEdu.MerchandiseService.Domain.Models;
+﻿using OzonEdu.MerchandiseService.Domain.Exceptions;
+using OzonEdu.MerchandiseService.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +10,15 @@ namespace OzonEdu.MerchandiseService.Domain.AggregationModels.MerchItemAggregate
 {
     public class Quantity : ValueObject
     {
+        public int Value { get; }
+
         public Quantity(int value)
         {
-            Value = value;
+            if (value > 0)
+                Value = value;
+            else
+                throw new IncorrectQuantityException($"Value is negative");
         }
-
-        public int Value { get; }
 
         protected override IEnumerable<object> GetEqualityComponents()
         {

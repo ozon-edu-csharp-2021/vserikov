@@ -36,7 +36,7 @@ namespace OzonEdu.MerchandiseService.Domain.AggregationModels.MerchItemAggregate
         {
         }
 
-        public PackType GetPackTypeById(int id)
+        public static PackType GetPackTypeById(int id)
         {
             return id switch
             {
@@ -45,7 +45,7 @@ namespace OzonEdu.MerchandiseService.Domain.AggregationModels.MerchItemAggregate
                 3 => ConferenceListenerPack,
                 4 => ConferenceSpeakerPack,
                 5 => VeteranPack,
-                _ => throw new UnknownPackTypeException($"unknown pack type with id {id}")
+                _ => throw new UnknownPackTypeException($"Unknown pack type with id {id}")
             };
         }
     }

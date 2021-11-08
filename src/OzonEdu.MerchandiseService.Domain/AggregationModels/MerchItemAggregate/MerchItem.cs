@@ -1,5 +1,5 @@
-﻿using OzonEdu.MerchandiseService.Domain.Exceptions;
-using OzonEdu.MerchandiseService.Domain.Models;
+﻿using OzonEdu.MerchandiseService.Domain.Models;
+using System;
 
 namespace OzonEdu.MerchandiseService.Domain.AggregationModels.MerchItemAggregate
 {
@@ -15,16 +15,11 @@ namespace OzonEdu.MerchandiseService.Domain.AggregationModels.MerchItemAggregate
 
         public MerchItem(Employee sender, Employee reciever, Pack pack, Quantity quantity)
         {
+            if (sender is null || reciever is null || pack is null || quantity is null)
+                throw new ArgumentNullException("One or more arguments are null");
             Sender = sender;
             Reciever = reciever;
             Pack = pack;
-            SetQuantity(quantity);
-        }
-
-        private void SetQuantity(Quantity quantity)
-        {
-            if (quantity.Value <= 0)
-                throw new IncorrectQuantityException($"Value {nameof(quantity.Value)} is negative");
             Quantity = quantity;
         }
     }

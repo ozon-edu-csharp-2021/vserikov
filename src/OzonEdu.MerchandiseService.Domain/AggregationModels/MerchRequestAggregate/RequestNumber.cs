@@ -7,13 +7,18 @@ using System.Threading.Tasks;
 
 namespace OzonEdu.MerchandiseService.Domain.AggregationModels.MerchRequestAggregate
 {
-    public class RequestNumber : Entity
+    public class RequestNumber : ValueObject
     {
         public long Value { get; }
 
         public RequestNumber(long value)
         {
             Value = value;
+        }
+
+        protected override IEnumerable<object> GetEqualityComponents()
+        {
+            yield return Value;
         }
     }
 }

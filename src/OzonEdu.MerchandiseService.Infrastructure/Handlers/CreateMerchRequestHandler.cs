@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace OzonEdu.MerchandiseService.Infrastructure.Handlers
 {
-    public class CreateMerchRequestHandler : IRequestHandler<CreateMerchRequestCommand>
+    internal class CreateMerchRequestHandler : IRequestHandler<CreateMerchRequestCommand>
     {
         private readonly IMerchRequestRepository _repository;
 
@@ -23,7 +23,6 @@ namespace OzonEdu.MerchandiseService.Infrastructure.Handlers
         public async Task<Unit> Handle(CreateMerchRequestCommand request, CancellationToken cancellationToken)
         {
             var merchRequest = new MerchRequest(
-                null,
                 RequestStatus.Queue,
                 new MerchItem(request.Sender, request.Reciever, request.Pack, request.Quantity));
 

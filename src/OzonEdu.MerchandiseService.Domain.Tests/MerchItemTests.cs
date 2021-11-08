@@ -20,6 +20,19 @@ namespace OzonEdu.MerchandiseService.Domain.Tests
         }
 
         [Fact]
+        public void TryToPassNullShouldThrowTheArgumentNullException()
+        {
+            Assert.Throws<IncorrectQuantityException>(() =>
+            {
+                var merchItem = new MerchItem(
+                    null,
+                    new Employee(114),
+                    new Pack(PackType.ConferenceSpeakerPack),
+                    new Quantity(-3));
+            });
+        }
+
+        [Fact]
         public void SetNegativeQuantityShouldThrowException()
         {
             Assert.Throws<IncorrectQuantityException>(() =>

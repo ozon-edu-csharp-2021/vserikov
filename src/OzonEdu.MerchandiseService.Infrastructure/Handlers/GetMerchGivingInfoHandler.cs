@@ -1,16 +1,13 @@
 ﻿using MediatR;
 using OzonEdu.MerchandiseService.Domain.AggregationModels.MerchItemAggregate;
+using OzonEdu.MerchandiseService.Infrastructure.Models;
 using OzonEdu.MerchandiseService.Infrastructure.Queries;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace OzonEdu.MerchandiseService.Infrastructure.Handlers
 {
-    public class GetMerchGivingInfoHandler : IRequestHandler<GetMerchGivingInfoQuery, List<MerchItem>>
+    internal class GetMerchGivingInfoHandler : IRequestHandler<GetMerchGivingInfoQuery, MerchGivingInfoResponse>
     {
         private readonly IMerchItemRepository _repository;
 
@@ -19,7 +16,7 @@ namespace OzonEdu.MerchandiseService.Infrastructure.Handlers
             _repository = repository;
         }
 
-        public Task<List<MerchItem>> Handle(GetMerchGivingInfoQuery request, CancellationToken cancellationToken)
-            => _repository.GetAll(cancellationToken);
+        public async Task<MerchGivingInfoResponse> Handle(GetMerchGivingInfoQuery request, CancellationToken cancellationToken)
+            => new MerchGivingInfoResponse() { MerchItems = await _repository.GetAllAsync(cancellationToken) };
     }
 }

@@ -24,13 +24,13 @@ namespace OzonEdu.MerchandiseService.Domain.AggregationModels.MerchItemAggregate
         /// <param name="id"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        Task<Employee> FindEmployeeById(int id, CancellationToken token = default);
+        Task<Employee> FindEmployeeByIdAsync(int id, CancellationToken token = default);
 
         /// <summary>
         /// Получить информацию по всем отправкам мерча
         /// </summary>
         /// <param name="token"></param>
         /// <returns></returns>
-        Task<List<MerchItem>> GetAll(CancellationToken token = default);
+        Task<List<MerchItem>> GetAllAsync(CancellationToken token = default);
     }
 }
