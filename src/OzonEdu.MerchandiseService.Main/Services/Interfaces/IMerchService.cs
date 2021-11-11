@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using OzonEdu.MerchandiseService.Domain.AggregationModels.MerchItemAggregate;
 using OzonEdu.MerchandiseService.HttpModels;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,6 @@ namespace OzonEdu.MerchandiseService.Main.Services.Interfaces
     {
         Task CreateMerchRequest(RequestMerchModel model, CancellationToken token);
 
-        Task<List<SingleMerchModel>> GetInfoAboutMerchGiving(CancellationToken token);
+        Task<List<MerchItem>> GetInfoAboutMerchGiving(CancellationToken token);
     }
 }

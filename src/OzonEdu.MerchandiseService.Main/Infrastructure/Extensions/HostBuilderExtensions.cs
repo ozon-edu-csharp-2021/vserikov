@@ -13,6 +13,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using OzonEdu.MerchandiseService.Main.Infrastructure.Interceptors;
+using OzonEdu.MerchandiseService.Infrastructure.Extensions;
 
 namespace OzonEdu.MerchandiseService.Main.Infrastructure.Extensions
 {
@@ -35,6 +36,8 @@ namespace OzonEdu.MerchandiseService.Main.Infrastructure.Extensions
                     options.SwaggerDoc("v1", new OpenApiInfo { Title = "OzonEdu.MerchandiseService", Version = "v1" });
                     options.CustomSchemaIds(x => x.FullName);
                 });
+
+                services.AddInfrastructureServices();
             });
 
             return builder;
